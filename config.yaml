@@ -117,9 +117,9 @@ dns:
  
 # 出站策略
 # 注意锚点必须放在引用的上方，可以集中把锚点全部放yaml的顶部。
-pr: &pr {type: select, proxies: [🚀 节点选择, ♻️ 新加坡自动, ♻️ 日本自动, ♻️ 韩国自动, ♻️ 自动选择, 🌐 全部节点, 直连]}
+pr: &pr {type: select, proxies: [🚀 节点选择, ♻️ 新加坡自动, ♻️ 日本自动, ♻️ 自动选择, 🌐 全部节点, 直连]}
 proxy-groups:
-  - {name: 🚀 节点选择, type: select, proxies: [♻️ 新加坡自动, ♻️ 日本自动, ♻️ 韩国自动, ♻️ 自动选择, 🌐 全部节点, 直连]}
+  - {name: 🚀 节点选择, type: select, proxies: [♻️ 新加坡自动, ♻️ 日本自动, ♻️ 自动选择, 🌐 全部节点, 直连]}
   - {name: 📹 YouTube, <<: *pr}
   - {name: 🍀 Google, <<: *pr}
   - {name: 🤖 ChatGPT, <<: *pr}
@@ -131,7 +131,6 @@ proxy-groups:
   - {name: 🐟 漏网之鱼, <<: *pr}
   - {name: ♻️ 新加坡自动, type: url-test, include-all: true, tolerance: 20, interval: 600, filter: "(?=.*(坡|狮|SG|(?i)Singapore))^((?!(台|日|韩|港|美)).)*$"}
   - {name: ♻️ 日本自动, type: url-test, include-all: true, tolerance: 20, interval: 600, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }
-  - {name: ♻️ 韩国自动, type: url-test, include-all: true, tolerance: 20, interval: 600, filter: "(?=.*(韩|KR|(?i)Korea))^((?!(港|台|日|美|新)).)*$"}
   - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 20, interval: 600, filter: "^((?!(直连)).)*$"}
   - {name: 🌐 全部节点, type: select, include-all: true}
 
