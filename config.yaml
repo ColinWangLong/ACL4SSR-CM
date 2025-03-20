@@ -2,7 +2,7 @@
 # 机场订阅
 proxy-providers:
   Airport1:
-    url: "机场订阅"
+    url: "https://api-hy.02000.net/api/v1/client/subscribe?token=03ae16d2186443d2e1f3fb27086f3955"
     type: http
     interval: 86400
     health-check:
