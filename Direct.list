@@ -8,7 +8,6 @@ DOMAIN-SUFFIX,msftcomecttest.com
 DOMAIN-SUFFIX,dns.msftncsi.com
 DOMAIN-SUFFIX,ipv6.msftconnecttest.com
 DOMAIN-SUFFIX,ai.com
-DOMAIN-SUFFIX,edu.cn
 
 
 # 域名关键字匹配
